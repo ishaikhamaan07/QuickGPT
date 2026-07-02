@@ -30,6 +30,28 @@ const SideBar = () => {
         placeholder='Search Conversation' className='text-xs 
         placeholder:text-gray-400 outline-none' />
       </div>
+
+      {/* Recent Chats */}
+      {chats.length > 0 && <p className='mt-4 text-sm '>Recent Chats</p>}
+      <div>
+        {
+            chats.filter((chat)=> chat.messages[0] ? chat.messages[0]?.content.
+            toLowerCase().includes(search.toLowerCase()) : chat.name.toLowerCase().
+            includes(search.toLowerCase())).map((chat)=>(
+                <div key={chat._id} className='p-2 px-4 dark:bg-[#57317C]/10border
+                border-gray-300 dark:border-[#80609F]/15 rounded-md cursor-pointer
+                flex justify-between group'>
+                     <div>
+                        <p className='truncate w-full'>
+                            {chat.messages.length > 0 ? chat.messages[0].content.
+                            slice(0,32) : chat.name}
+                        </p>
+                        <p className='test-xs text-gray-500 dark:text-[#B1A6C0]'>{chat.updatedAt}</p>
+                     </div>
+                </div>
+            )) 
+        }
+      </div>
     </div>
   )
 }
