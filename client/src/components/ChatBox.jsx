@@ -17,7 +17,7 @@ const ChatBox = () => {
   const [isPublished, setIsPublished] = useState(false)
 
   const onSubmit = async (e) => {
-    e=preventDefault
+    e=preventDefault();
   }
 
   useEffect(() => {
