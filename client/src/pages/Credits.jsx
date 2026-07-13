@@ -25,10 +25,10 @@ const Credits = () => {
 
       <div className="flex flex-wrap justify-center gap-8">
         {plans.map((plan)=> (
-          <div key={plan._id} className={`border border-gray-200
-          dar:border-purple-700 rounded-lg shadow hover:-lg
+          <div key={plan._id} className={`border 
+          border-gray-200 dark:border-purple-700 rounded-lg shadow hover:shadow-lg
           transition-shadow p-6 min-w-[300px] flex flex-col ${plan._id === "pro" ? 
-          "bg-purple-50 dark:bg-purple-900" : "bg-white dark:bg-transperent"}`}>
+          "bg-purple-50 dark:bg-purple-900" : "bg-white dark:bg-transparent"}`}>
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white
               mb-2">{plan.name}</h3>
@@ -46,7 +46,7 @@ const Credits = () => {
             </div>
             <button className="mt-6 bg-purple-600 hover:bg-purple-700
             active:bg-purple-800 text-white font-medium py-2 rounded
-            transition-color cursor-pointer">Buy Now</button>
+            transition-colors cursor-pointer">Buy Now</button>
           </div>
         ))}        
       </div>
