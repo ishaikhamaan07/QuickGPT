@@ -18,6 +18,9 @@ const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const {pathname} = useLocation()
 
+  console.log("Current pathname:", pathname);
+
+
   if(pathname === '/loading') return <Loading />
 
   return (
