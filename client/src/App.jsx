@@ -28,7 +28,7 @@ const App = () => {
     <>
     <Toaster />
     {!isMenuOpen && <img src={assets.menu_icon} className='absolute top-3 left-3 
-    w-8 h-8 cusor-pointer md:hidden not-dark:invert' onClick={()=>setIsMenuOpen(true)}/>}
+    w-8 h-8 cursor-pointer md:hidden not-dark:invert' onClick={()=>setIsMenuOpen(true)}/>}
 
     {user ? (
       <div className='dark:bg-gradient-to-b from-[#242124] to-[#000000] dark:text-white'>
