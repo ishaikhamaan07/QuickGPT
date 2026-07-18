@@ -11,6 +11,7 @@ const Message = ({message}) => {
     Prism.highlightAll()
   },[message.content])
 
+
   return (
     <div>
       {message.role === "user" ? (
@@ -24,7 +25,7 @@ const Message = ({message}) => {
       )
       : 
       (
-        <div className="inline-flex flex-col gap-2 p-2 px-4 max-w-2xl bg-primary/20 dark/bg-[#57317C]/30 rounded-md my-4">
+        <div className="inline-flex flex-col gap-2 p-2 px-4 max-w-2xl bg-primary/20 dark:bg-[#57317C]/30 rounded-md my-4">
             {message.isImage ? (
                 <img src={message.content} alt="" className="w-full max-w-md mt-2 rounded-md"/>
             ):

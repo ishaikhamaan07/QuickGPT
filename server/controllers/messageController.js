@@ -22,7 +22,7 @@ export const textMessageController = async(req, res) => {
         })
 
         chat.messages.push({
-            role: "User",
+            role: "user",
             content: prompt,
             timestamp: Date.now(),
             isImage: false
