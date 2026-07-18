@@ -11,6 +11,8 @@ const Message = ({message}) => {
     Prism.highlightAll()
   },[message.content])
 
+console.log(message);
+
 
   return (
     <div>
